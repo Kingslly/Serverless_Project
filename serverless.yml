@@ -8,6 +8,8 @@ provider:
 functions:
   lambda_handler:
     handler: my_lambda_function.lambda_handler
+    timeout: 1  # minute
+    memorysize: 500  # mb
     events:
       - http:
           path: /{proxy+}
